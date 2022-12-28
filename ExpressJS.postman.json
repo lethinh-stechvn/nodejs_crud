@@ -1,0 +1,1078 @@
+{
+	"info": {
+		"_postman_id": "47881646-66ba-4e01-b31b-9f37c30252d4",
+		"name": "ExpressJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21389345"
+	},
+	"item": [
+		{
+			"name": "hososinhvien_get_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hososinhvien_get_by_mssv",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hososinhvien_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mssv",
+							"value": "123111111",
+							"type": "text"
+						},
+						{
+							"key": "hoten",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "ngaysinh",
+							"value": "09/03/2001",
+							"type": "text"
+						},
+						{
+							"key": "gioitinh",
+							"value": "nam",
+							"type": "text"
+						},
+						{
+							"key": "doituong",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "quequan",
+							"value": "qwe",
+							"type": "text"
+						},
+						{
+							"key": "nganhhoc",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hososinhvien_update_by_mssv",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hoten",
+							"value": "1231",
+							"type": "text"
+						},
+						{
+							"key": "ngaysinh",
+							"value": "123213213",
+							"type": "text"
+						},
+						{
+							"key": "nganhhoc",
+							"value": "1321",
+							"type": "text"
+						},
+						{
+							"key": "quequan",
+							"value": "1321213",
+							"type": "text"
+						},
+						{
+							"key": "khoa",
+							"value": "11111",
+							"type": "text"
+						},
+						{
+							"key": "gioitinh",
+							"value": "1111",
+							"type": "text"
+						},
+						{
+							"key": "doituong",
+							"value": "11111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/1231",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						"1231"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hososinhvien_delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hososinhvien_delete_by_mssv",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhoc_get_all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhoc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhoc_get_by_mamonhoc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhoc/1111",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhoc",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhoc_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mamonhoc",
+							"value": "1111",
+							"type": "text"
+						},
+						{
+							"key": "tenmonhoc",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "loaimonhoc",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "sotiet",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhoc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhoc_update_by_mamonhoc",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "tenmonhoc",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "loaimonhoc",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "sotiet",
+							"value": "45",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhoc/1111",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhoc",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachsinhvien_delete_by_mamonhoc",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhoc/1111",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhoc",
+						"1111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhoc_delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhoc/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhoc",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chuongtrinhhoc_get_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/chuongtrinhhoc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"chuongtrinhhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chuongtrinhhoc_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "khoa",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "nganhhoc",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "ghichu",
+							"value": "aaa",
+							"type": "text"
+						},
+						{
+							"key": "hocky",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "monhoc",
+							"value": "111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/chuongtrinhhoc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"chuongtrinhhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chuongtrinhhoc_get_by_nganhhoc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/chuongtrinhhoc/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"chuongtrinhhoc",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chuongtrinhhoc_update_by_nganhhoc",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hocky",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "monhoc",
+							"value": "123213213",
+							"type": "text"
+						},
+						{
+							"key": "ghichu",
+							"value": "1321213",
+							"type": "text"
+						},
+						{
+							"key": "khoa",
+							"value": "222",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/chuongtrinhhoc/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"chuongtrinhhoc",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chuongtrinhhoc_delete_by_nganhhoc",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chuongtrinhhoc_delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/chuongtrinhhoc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"chuongtrinhhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_get_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhocmo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhocmo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_get_by_stt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhocmo/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhocmo",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "namhoc",
+							"value": "2001",
+							"type": "text"
+						},
+						{
+							"key": "hocky",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "monhoc",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhocmo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhocmo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_update_by_stt",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hoten",
+							"value": "1231",
+							"type": "text"
+						},
+						{
+							"key": "ngaysinh",
+							"value": "123213213",
+							"type": "text"
+						},
+						{
+							"key": "nganhhoc",
+							"value": "1321",
+							"type": "text"
+						},
+						{
+							"key": "quequan",
+							"value": "1321213",
+							"type": "text"
+						},
+						{
+							"key": "khoa",
+							"value": "11111",
+							"type": "text"
+						},
+						{
+							"key": "gioitinh",
+							"value": "1111",
+							"type": "text"
+						},
+						{
+							"key": "doituong",
+							"value": "11111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/1231",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						"1231"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_delete_by_stt",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hososinhvien/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hososinhvien",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phieuthuhocphi_get_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/phieuthuhocphi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"phieuthuhocphi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phieuthuhocphi_get_by_ sophieuhocphi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/phieuthuhocphi/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"phieuthuhocphi",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phieuthuhocphi_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "sophieuhocphi",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "mssv",
+							"value": "111",
+							"type": "text"
+						},
+						{
+							"key": "ngaylap",
+							"value": "2002-02-01",
+							"type": "text"
+						},
+						{
+							"key": "sotienthu",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/phieuthuhocphi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"phieuthuhocphi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phieuthuhocphi_update_by_sophieuhocphi",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mssv",
+							"value": "111",
+							"type": "text"
+						},
+						{
+							"key": "ngaylap",
+							"value": "2000-09-01",
+							"type": "text"
+						},
+						{
+							"key": "sotienthu",
+							"value": "1111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/phieuthuhocphi/3?",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"phieuthuhocphi",
+						"3"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phieuthuhocphi_delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/phieuthuhocphi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"phieuthuhocphi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phieuthuhocphi_delete_by_sophieuhocphi",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/phieuthuhocphi/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"phieuthuhocphi",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachchuadonghocphi_get_all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachchuadonghocphi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachchuadonghocphi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachmonhocmo_get_by_stt Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachmonhocmo/123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachmonhocmo",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachchuadonghocphi_create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "namhoc",
+							"value": "2001",
+							"type": "text"
+						},
+						{
+							"key": "hocky",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "mssv",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sotiendangky",
+							"value": "1111",
+							"type": "text"
+						},
+						{
+							"key": "sotienphaidong",
+							"value": "111",
+							"type": "text"
+						},
+						{
+							"key": "sotienconlai",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/danhsachchuadonghocphi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachchuadonghocphi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachchuadonghocphi_update_by_mssv",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "namhoc",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "hocky",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sotiendangky",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sotienphaidong",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "sotienconlai",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/danhsachchuadonghocphi/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachchuadonghocphi",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachchuadonghocphi_delete_all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachchuadonghocphi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachchuadonghocphi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "danhsachchuadonghocphi_delete_by_mssv",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/danhsachchuadonghocphi/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"danhsachchuadonghocphi",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
