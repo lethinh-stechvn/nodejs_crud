@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th12 28, 2022 lúc 06:11 AM
+-- Thời gian đã tạo: Th12 28, 2022 lúc 09:45 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.1.12
 
@@ -48,6 +48,14 @@ CREATE TABLE `dangkyhocphan` (
   `hocky` int(11) NOT NULL,
   `namhoc` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `dangkyhocphan`
+--
+
+INSERT INTO `dangkyhocphan` (`sophieu`, `mssv`, `ngaylap`, `hocky`, `namhoc`) VALUES
+('1', '1111', '123', 2, 2001),
+('11111111', '1111', '123', 2, 2001);
 
 -- --------------------------------------------------------
 
@@ -97,14 +105,14 @@ CREATE TABLE `danhsachmonhocmo` (
   `hocky` int(11) NOT NULL,
   `namhoc` int(11) NOT NULL,
   `stt` int(11) NOT NULL,
-  `monhoc` varchar(50) NOT NULL
+  `tenmonhoc` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `danhsachmonhocmo`
 --
 
-INSERT INTO `danhsachmonhocmo` (`hocky`, `namhoc`, `stt`, `monhoc`) VALUES
+INSERT INTO `danhsachmonhocmo` (`hocky`, `namhoc`, `stt`, `tenmonhoc`) VALUES
 (2, 2001, 6, '123'),
 (2, 2001, 7, '123');
 
@@ -123,6 +131,25 @@ CREATE TABLE `hososinhvien` (
   `doituong` varchar(50) NOT NULL,
   `nganhhoc` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `monhocdangkyhocphan`
+--
+
+CREATE TABLE `monhocdangkyhocphan` (
+  `sophieu` varchar(10) NOT NULL,
+  `tenmonhoc` varchar(255) NOT NULL,
+  `sotinchi` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `monhocdangkyhocphan`
+--
+
+INSERT INTO `monhocdangkyhocphan` (`sophieu`, `tenmonhoc`, `sotinchi`) VALUES
+('11111111', 'eqwwqeqwe1111', 1);
 
 -- --------------------------------------------------------
 
@@ -151,31 +178,48 @@ ALTER TABLE `chuongtrinhhoc`
 -- Chỉ mục cho bảng `dangkyhocphan`
 --
 ALTER TABLE `dangkyhocphan`
-  ADD PRIMARY KEY (`sophieu`);
+  ADD PRIMARY KEY (`sophieu`),
+  ADD KEY `mssv` (`mssv`);
 
 --
 -- Chỉ mục cho bảng `danhsachchuadonghocphi`
 --
 ALTER TABLE `danhsachchuadonghocphi`
-  ADD KEY `stt` (`stt`);
+  ADD KEY `stt` (`stt`),
+  ADD KEY `mssv` (`mssv`);
 
 --
 -- Chỉ mục cho bảng `danhsachmonhoc`
 --
 ALTER TABLE `danhsachmonhoc`
-  ADD PRIMARY KEY (`mamonhoc`);
+  ADD PRIMARY KEY (`mamonhoc`),
+  ADD UNIQUE KEY `tenmonhoc` (`tenmonhoc`);
 
 --
 -- Chỉ mục cho bảng `danhsachmonhocmo`
 --
 ALTER TABLE `danhsachmonhocmo`
-  ADD PRIMARY KEY (`stt`);
+  ADD PRIMARY KEY (`stt`),
+  ADD KEY `tenmonhoc` (`tenmonhoc`);
 
 --
 -- Chỉ mục cho bảng `hososinhvien`
 --
 ALTER TABLE `hososinhvien`
-  ADD PRIMARY KEY (`mssv`);
+  ADD PRIMARY KEY (`mssv`),
+  ADD KEY `nganhhoc` (`nganhhoc`);
+
+--
+-- Chỉ mục cho bảng `monhocdangkyhocphan`
+--
+ALTER TABLE `monhocdangkyhocphan`
+  ADD KEY `sophieu` (`sophieu`);
+
+--
+-- Chỉ mục cho bảng `phieuthuhocphi`
+--
+ALTER TABLE `phieuthuhocphi`
+  ADD KEY `mssv` (`mssv`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -192,6 +236,35 @@ ALTER TABLE `danhsachchuadonghocphi`
 --
 ALTER TABLE `danhsachmonhocmo`
   MODIFY `stt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `danhsachmonhoc`
+--
+ALTER TABLE `danhsachmonhoc`
+  ADD CONSTRAINT `danhsachmonhoc_ibfk_1` FOREIGN KEY (`tenmonhoc`) REFERENCES `danhsachmonhocmo` (`tenmonhoc`);
+
+--
+-- Các ràng buộc cho bảng `hososinhvien`
+--
+ALTER TABLE `hososinhvien`
+  ADD CONSTRAINT `hososinhvien_ibfk_1` FOREIGN KEY (`nganhhoc`) REFERENCES `chuongtrinhhoc` (`nganhhoc`),
+  ADD CONSTRAINT `hososinhvien_ibfk_2` FOREIGN KEY (`mssv`) REFERENCES `dangkyhocphan` (`mssv`);
+
+--
+-- Các ràng buộc cho bảng `monhocdangkyhocphan`
+--
+ALTER TABLE `monhocdangkyhocphan`
+  ADD CONSTRAINT `monhocdangkyhocphan_ibfk_1` FOREIGN KEY (`sophieu`) REFERENCES `dangkyhocphan` (`sophieu`);
+
+--
+-- Các ràng buộc cho bảng `phieuthuhocphi`
+--
+ALTER TABLE `phieuthuhocphi`
+  ADD CONSTRAINT `phieuthuhocphi_ibfk_1` FOREIGN KEY (`mssv`) REFERENCES `hososinhvien` (`mssv`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
