@@ -84,5 +84,86 @@ module.exports = app => {
    // Delete all Tutorials
    router.delete("/chuongtrinhhoc", chuongtrinhhoc.deleteAll);
 
+  ////////////////////////////////////////////////////////////////
+  const danhsachmonhocmo = require("../controllers/danhsachmonhocmo_controller.js");
+  // Create a new Tutorial
+   router.post("/danhsachmonhocmo", danhsachmonhocmo.create);
+
+   // Retrieve all Tutorials
+   router.get("/danhsachmonhocmo", danhsachmonhocmo.findAll);
+ 
+   // Retrieve a single Tutorial with id
+   router.get("/danhsachmonhocmo/:stt", danhsachmonhocmo.findOne);
+ 
+   // Update a Tutorial with id
+   router.put("/danhsachmonhocmo/:stt", danhsachmonhocmo.update);
+ 
+   // Delete a Tutorial with id
+   router.delete("/danhsachmonhocmo/:stt", danhsachmonhocmo.delete);
+ 
+   // Delete all Tutorials
+   router.delete("/danhsachmonhocmo", danhsachmonhocmo.deleteAll);
+
+////////////////////////////////////////////////////////////////
+  const dangkyhocphan = require("../controllers/dangkyhocphan_controller.js");
+  // Create a new Tutorial
+   router.post("/dangkyhocphan", dangkyhocphan.create);
+
+   // Retrieve all Tutorials
+   router.get("/dangkyhocphan", dangkyhocphan.findAll);
+ 
+   // Retrieve a single Tutorial with id
+   router.get("/dangkyhocphan/:sophieu", dangkyhocphan.findOne);
+ 
+   // Update a Tutorial with id
+   router.put("/dangkyhocphan/:sophieu", dangkyhocphan.update);
+ 
+   // Delete a Tutorial with id
+   router.delete("/dangkyhocphan/:sophieu", dangkyhocphan.delete);
+ 
+   // Delete all Tutorials
+   router.delete("/dangkyhocphan", dangkyhocphan.deleteAll);
+
+////////////////////////////////////////////////////////////////
+const phieuthuhocphi = require("../controllers/phieuthuhocphi_controller.js");
+// Create a new Tutorial
+ router.post("/phieuthuhocphi", phieuthuhocphi.create);
+
+ // Retrieve all Tutorials
+ router.get("/phieuthuhocphi", phieuthuhocphi.findAll);
+
+ // Retrieve a single Tutorial with id
+ router.get("/phieuthuhocphi/:sophieuhocphi", phieuthuhocphi.findOne);
+
+ // Update a Tutorial with id
+ router.put("/phieuthuhocphi/:sophieuhocphi", phieuthuhocphi.update);
+
+ // Delete a Tutorial with id
+ router.delete("/phieuthuhocphi/:sophieuhocphi", phieuthuhocphi.delete);
+
+ // Delete all Tutorials
+ router.delete("/phieuthuhocphi", phieuthuhocphi.deleteAll);
+
+////////////////////////////////////////////////////////////////
+const danhsachchuadonghocphi = require("../controllers/danhsachchuadonghocphi_controller.js");
+// Create a new Tutorial
+ router.post("/danhsachchuadonghocphi", danhsachchuadonghocphi.create);
+
+ // Retrieve all Tutorials
+ router.get("/danhsachchuadonghocphi", danhsachchuadonghocphi.findAll);
+
+ // Retrieve a single Tutorial with id
+ router.get("/danhsachchuadonghocphi/:mssv", danhsachchuadonghocphi.findOne);
+
+ // Update a Tutorial with id
+ router.put("/danhsachchuadonghocphi/:mssv",danhsachchuadonghocphi.update);
+
+ // Delete a Tutorial with id
+ router.delete("/danhsachchuadonghocphi/:mssv", phieuthuhocphi.delete);
+
+ // Delete all Tutorials
+ router.delete("/danhsachchuadonghocphi", phieuthuhocphi.deleteAll);
+
+
   app.use('/api', router);
 };
