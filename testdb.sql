@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost
--- Thời gian đã tạo: Th12 28, 2022 lúc 01:21 AM
+-- Thời gian đã tạo: Th12 28, 2022 lúc 06:11 AM
 -- Phiên bản máy phục vụ: 10.4.27-MariaDB
 -- Phiên bản PHP: 8.1.12
 
@@ -48,16 +48,6 @@ CREATE TABLE `dangkyhocphan` (
   `hocky` int(11) NOT NULL,
   `namhoc` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `dangkyhocphan`
---
-
-INSERT INTO `dangkyhocphan` (`sophieu`, `mssv`, `ngaylap`, `hocky`, `namhoc`) VALUES
-('1', '11111', '111', 2, 2001),
-('11', '11111', '111', 2, 2001),
-('111', '11111', '111', 2, 2001),
-('123', '11111', '1111', 1, 2001);
 
 -- --------------------------------------------------------
 
@@ -115,7 +105,8 @@ CREATE TABLE `danhsachmonhocmo` (
 --
 
 INSERT INTO `danhsachmonhocmo` (`hocky`, `namhoc`, `stt`, `monhoc`) VALUES
-(2, 2001, 6, '123');
+(2, 2001, 6, '123'),
+(2, 2001, 7, '123');
 
 -- --------------------------------------------------------
 
@@ -200,7 +191,7 @@ ALTER TABLE `danhsachchuadonghocphi`
 -- AUTO_INCREMENT cho bảng `danhsachmonhocmo`
 --
 ALTER TABLE `danhsachmonhocmo`
-  MODIFY `stt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `stt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
