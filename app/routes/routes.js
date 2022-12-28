@@ -159,11 +159,29 @@ const danhsachchuadonghocphi = require("../controllers/danhsachchuadonghocphi_co
  router.put("/danhsachchuadonghocphi/:mssv",danhsachchuadonghocphi.update);
 
  // Delete a Tutorial with id
- router.delete("/danhsachchuadonghocphi/:mssv", phieuthuhocphi.delete);
+ router.delete("/danhsachchuadonghocphi/:mssv", danhsachchuadonghocphi.delete);
 
  // Delete all Tutorials
- router.delete("/danhsachchuadonghocphi", phieuthuhocphi.deleteAll);
+ router.delete("/danhsachchuadonghocphi", danhsachchuadonghocphi.deleteAll);
 
-
+ const monhocdangkyhocphan = require("../controllers/monhocdangkyhocphan_controller.js");
+ // Create a new Tutorial
+  router.post("/monhocdangkyhocphan", monhocdangkyhocphan.create);
+ 
+  // Retrieve all Tutorials
+  router.get("/monhocdangkyhocphan", monhocdangkyhocphan.findAll);
+ 
+  // Retrieve a single Tutorial with id
+  router.get("/monhocdangkyhocphan/:sophieu", monhocdangkyhocphan.findOne);
+ 
+  // Update a Tutorial with id
+  router.put("/monhocdangkyhocphan/:sophieu",monhocdangkyhocphan.update);
+ 
+  // Delete a Tutorial with id
+  router.delete("/monhocdangkyhocphan/:sophieu", monhocdangkyhocphan.delete);
+ 
+  // Delete all Tutorials
+  router.delete("/monhocdangkyhocphan/", monhocdangkyhocphan.deleteAll);
+ 
   app.use('/api', router);
 };
